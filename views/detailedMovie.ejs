@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <%=movie.title%> </h1>
+
+    <h2>Detalles de la película <%=movie.title%> </h2>
+    
+    <h3>Rating: <%=movie.rating%></h3>
+    <h3>Premios:<%=movie.awards%></h3>
+    <h3>Duracion: <%=movie.length%></h3>
+    <h3>Fecha de estreno: <%=movie.release_date%></h3>
+
+    <form method="PUT" action="/movies/detail/<%= movie.id %>?_method=PUT" enctype="multipart/form-data" >
+        <button type="submit" id="comprar">Editar</button>
+    </form>
+        <form action="/movies/detail/<%= movie.id %>?_method=DELETE" method="POST">
+            <button type="submit" id="carrito" class="action-button delete">ELIMINAR</button>
+        </form> 
+</body>
+</html>
